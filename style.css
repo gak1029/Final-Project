@@ -1,0 +1,174 @@
+/* Importing stylish Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Root variables for easy customization */
+:root {
+    --primary-color: #0077b6; /* Ocean Blue */
+    --secondary-color: #0096c7; /* Aqua */
+    --accent-color: #ffdd59; /* Sunset Yellow */
+    --bg-color: #f0f8ff; /* Light Aqua */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+    --text-color: #023047;
+    --hover-color: #ff6b6b;
+}
+
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1.main-title {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+p, ul {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+button, a.button {
+    background: var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, a.button:hover {
+    background: var(--hover-color);
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Hover and Interactive Effects */
+section:hover {
+    background: rgba(0, 150, 199, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+/* Styling specific elements */
+#about strong, #products strong {
+    color: var(--secondary-color);
+
+}
+
+.employee h3 {
+    font-family: var(--font-secondary);
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.employee p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    h2, h3 {
+        font-size: 2rem;
+    }
+
+    p, ul {
+        font-size: 0.9rem;
+    }
+
+    button, a.button {
+        font-size: 0.9rem;
+    }
+img {
+    margin: 15px;
+}
+
+}
